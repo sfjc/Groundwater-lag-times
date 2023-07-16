@@ -87,3 +87,6 @@ We can also examine the correlation of lag time with well depth, which at 0.45 i
 
 The basis of the project, that it should be possible to filter and process large quantities of groundwater and rainfall data using Python, and produce hydrogeologically relevant information, has been demonstrated. A further investigation might consider using similar methods to look at the relative scale of rainfall events and the corresponding groundwater rises, as this too indicates significant things about the local aquifer and the rate of infiltration.
 
+### Acknowledgements
+
+Would like to acknowledge both Kaggle and [NCAR/EOL](https://data.eol.ucar.edu/) (under the sponsorship of the National Science Foundation) 
