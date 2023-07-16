@@ -42,6 +42,7 @@ Further reductions in the data proved necessary, as neither the number of rain g
 Having done so, reducing the number of suitable wells to fewer than 100, correlation coefficients between the water level data and the rainfall data were tested for a plausible range of lag times (<180 days). The lag time producing the best correlation coefficient was in each case selected.
 The chart below [Fig 1] shows possible lag times, in days, between rainfall and groundwater response, for a single well '05N03E09L001M' and the closest available rainfall data. Also shown [Fig 2] are the WL and rainfall data from which this chart was derived.
 
+
 ![graph_rental_seattle](https://user-images.githubusercontent.com/127019857/226162365-c8504196-28fb-445f-a265-69d0645d5d0a.png)
 
 
