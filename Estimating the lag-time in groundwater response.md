@@ -44,12 +44,12 @@ Having done so, reducing the number of suitable wells to fewer than 100, correla
 The chart below [Fig 1] shows possible lag times, in days, between rainfall and groundwater response, for a single well '05N03E09L001M' and the closest available rainfall data. Also shown [Fig 2] are the WL and rainfall data from which this chart was derived.
 
 
-![Fig_1](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig1.png)
+![Fig_1](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig1_2.png)
 
 **Figure 1 – Possible time lags for well '05N03E09L001M'**
 
 
-![Fig_2](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig2.png)
+![Fig_2](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig2_2.png)
 
 **Figure 2 – Water levels and precipitation for test well '05N03E09L001M'**
     
@@ -67,19 +67,19 @@ The chart below [Fig 1] shows possible lag times, in days, between rainfall and 
 With the downselected set of wells having been processed similarly, statistical overviews of the results became possible. Here, for example, is a histogram of the estimated lag times for all wells.
 
 
-![Fig_3](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig3.png)
+![Fig_3](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig3_2.png)
 
 **Figure 3 – Estimated lag times for all suitable wells in the dataset. The distribution is perhaps log-normal**
 
 We can also examine the correlation of lag time with well depth, which at 0.45 is moderate rather than strong, likely owing to the many other important factors.
 
 
-![Fig_4](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig4.png)
+![Fig_4](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig4_2.png)
 
 **Figure 4 – Scatter plot of time lag and well depth**
 
 
-![Fig_5](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig5.png)
+![Fig_5](https://github.com/sfjc/Groundwater-lag-times/blob/main/Fig5_2.png)
 
 **Figure 5 – Wells for which a time lag was estimated. Cities and towns are shown as small dots.**
 
