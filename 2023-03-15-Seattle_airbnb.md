@@ -1,11 +1,12 @@
 <div style="text-align:right">
 
-### Looking to either rent or rent out? Read this first!
+### Estimating the lag-time in groundwater response to precipitation for multiple wells across a large region using publicly available data – a test study
+
+S F John Cody
   
 </div>
 
 ![pexels-amanda-grove-419235](https://user-images.githubusercontent.com/127019857/226548405-6c2aa0dc-ce64-49d0-a5e8-7de123700362.jpg)
-
 
 
 So... have you ever wanted to know the relationship between various kinds of information in a large dataset representing the Airbnb rental environment in Seattle?
