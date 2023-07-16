@@ -7,7 +7,7 @@ S F John Cody
 </div>
 
 ![pexels-amanda-grove-419235](https://user-images.githubusercontent.com/127019857/226548405-6c2aa0dc-ce64-49d0-a5e8-7de123700362.jpg)
-[Image by ibrandify on Freepik]
+[ Image by rawpixel.com on Freepik ]
 
 So... have you ever wanted to know the relationship between various kinds of information in a large dataset representing the Airbnb rental environment in Seattle?
 
