@@ -1,6 +1,6 @@
 <div style="text-align:right">
 
-### Estimating the lag-time in groundwater response to precipitation for multiple wells across a large region using publicly available data – a test study
+### Estimating the lag-time in groundwater response to precipitation for multiple wells across a large region using publicly available data: a test study
 
 S F John Cody
   
@@ -9,73 +9,45 @@ S F John Cody
 ![water_drops](https://github.com/sfjc/Groundwater-lag-times/blob/main/white-background-water-drops-texture-design.jpg)
 [ Image by rawpixel.com on Freepik ]
 
-![pexels-amanda-grove-419235](https://user-images.githubusercontent.com/127019857/226548405-6c2aa0dc-ce64-49d0-a5e8-7de123700362.jpg)
+## Project Overview
 
-So... have you ever wanted to know the relationship between various kinds of information in a large dataset representing the Airbnb rental environment in Seattle?
+In hydrogeology, understanding the hydraulic properties of the aquifers we are dealing with is one of the most crucial aspects of our work. However, it is often difficult or expensive to acquire good information, and even when we have it for a single location we frequently do not know much about how it varies spatially through the entire region. Any source that can provide additional data in this regard is thus very valuable to us. The speed with which groundwater levels in a well respond to rainfall (lag-time) can be such a source, as this parameter is to a significant extent contingent on those hydraulic properties, and together with other knowledge about the well this lag-time was derived from can be used to estimate them.
 
-Of course you haven't. It is unlikely that you live in Seattle (only 1% of US citizens do, assuming you are within the US). I haven't 
-even been there.
+## Problem Statement
 
-Nevertheless, you may have used the near-globally popular Airbnb rental service for accomodation. You may even have considered matters from the other end,
-as a property owner seeking to make best use of an empty room.
+The purpose of the project is to use Python to process large, publicly available datasets from both groundwater monitoring wells and rain gauges and winnow it down to useful subsets from which the time-lags between precipitation and groundwater response can be determined. This data can then be plotted on a map or compared to well parameters.
 
-If so, such information is highly instructive and likely widely applicable, and could make a very real difference, both on the bottom line and in terms of the comfort and convenience of your lifestyle. There is much we can learn!
+## Metrics
 
-These are the three questions I am posing:
+Correlation coefficients between the time-lag shifted groundwater data and the rainfall will serve as a threshold for using the estimates. Coefficients <0.3 will not be used.
 
-1) Do properties with stricter cancellation policies typically have higher prices?
+## Analysis
 
-2) How does the number of available properties vary through the year? Is it cyclical? Is there an overall trend?
+The datasets come from two locations. The groundwater data is sourced from 
 
-3) Are there any particular words in the property summaries associated with higher prices?
+https://www.kaggle.com/datasets/alifarahmandfar/continuous-groundwater-level-measurements-2023
 
+...and consists of 74.47 MB in four .csv files, including hourly groundwater level measurements and a .csv including station (well) codes and other related information, such as latitude and longitude.
+The precipitation dataset is much larger. It comprises 7292 files (.gz and .Z) totaling 3.4GB.
+It was downloaded with wget from an anonymous ftp following completion of this form:
 
-First, let's look at whether properties with stricter cancellation properties typically have higher prices.
-Airbnb has three categories for cancellation: 'flexible', 'moderate' and 'strict'.
+https://data.eol.ucar.edu/cgi-bin/codiac/fgr_form/id=21.004
 
-From the data made available by Airbnb on Kaggle,
-the answer appears to be yes, there is an association; however, the association is a very weak one, with a Pearson coefficient of 0.26.
+## Process
+The groundwater data only covers the State of California, so one of the first steps was to reduce the available rain gauge data to the same region. Similarly, the time range for both datasets had to match, which meant restricting both to a twenty year span from 12-31-1999 to 12-31-2019.
 
-What does this mean?
-
-This means that as a renter, if you are seeking a property with a higher price, it won't necessarily require you to follow a strict cancellation policy,
-although it is more likely to. As a landlord, it means that even if you have a property that doesn't fetch a high price, you can still set strict
-cancellation policies without being completely out-of-step with rival properties.
-
-Next, I took at look at the data describing the number of properties available to rent out of the total, and how this varied through the data. The 
-graph describing this data is shown below.
+Following further processing and filtering of the data, each of the wells in the data was assigned to the four closest rain gauges. In this way, data gaps due to non-reporting rain gauges could be reduced.  
+The average signal from the four rain gauges was combined into a single value, and a 14 day rolling average of this value was compared to a similar rolling average groundwater level. This reduced the impact of irregularities and fluctuations.
+Further reductions in the data proved necessary, as neither the number of rain gauge measurements nor the span of time they covered were sufficient for all wells. A minimum timespan of 200 days and a minimum of 100 individual rain gauge measurements were set as limits.
+Having done so, reducing the number of suitable wells to fewer than 100, correlation coefficients between the water level data and the rainfall data were tested for a plausible range of lag times (<180 days). The lag time producing the best correlation coefficient was in each case selected.
+The chart below [Fig 1] shows possible lag times, in days, between rainfall and groundwater response, for a single well '05N03E09L001M' and the closest available rainfall data. Also shown [Fig 2] are the WL and rainfall data from which this chart was derived.
 
 ![graph_rental_seattle](https://user-images.githubusercontent.com/127019857/226162365-c8504196-28fb-445f-a265-69d0645d5d0a.png)
 
-Here we can see a number of very interesting features:
-
-i) The availability of properties increases throughout the year - perhaps due to more people learning about and deciding to use the Airbnb service for their property,
-and supply rising faster than demand.
-
-ii) There is a cyclical variation in property availability with a wavelength of one week. This diminishes towards the end of the year - perhaps linked to point (i).
-
-iii) There are two big drops in availability. This may be due to major events in the Seattle area or perhaps set times in the academic year.
-
-While the data is from 2016 and is particular to Seattle, I believe this is highly applicable to any time and location. Be aware of the competitive environment for 
-airbnb properties (low availability is good for the would-be landlord and bad for the would-be renter, and vice versa), be aware of the days in the week that are most in
-demand and be aware of any major local events that could temporarily drive up demand.
-
-Finally, I looked at which words in the summaries appeared linked to high rental prices. The ten words most associated with high prices are shown below:
 
 
 ![words_price](https://user-images.githubusercontent.com/127019857/226174775-6b4ffa9a-96ed-4aa2-8bca-4787e9fafc25.png)
 
-This is fascinating. Note that renters are seemingly most willing to pay top money for:
-
-great views
-
-multiple bedrooms
-
-popular locations (Pike Place is home to a famous market)
-
-modern fittings
-
-...among other things.
 
 Surely of interest to anyone seeking to maximize the returns from a potential rental property!
 
