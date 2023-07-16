@@ -6,8 +6,10 @@ S F John Cody
   
 </div>
 
-![water drops]((https://github.com/sfjc/Groundwater-lag-times/blob/main/white-background-water-drops-texture-design.jpg)
+![water_drops](https://github.com/sfjc/Groundwater-lag-times/blob/main/white-background-water-drops-texture-design.jpg)
 [ Image by rawpixel.com on Freepik ]
+
+![pexels-amanda-grove-419235](https://user-images.githubusercontent.com/127019857/226548405-6c2aa0dc-ce64-49d0-a5e8-7de123700362.jpg)
 
 So... have you ever wanted to know the relationship between various kinds of information in a large dataset representing the Airbnb rental environment in Seattle?
 
