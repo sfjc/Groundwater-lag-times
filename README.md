@@ -35,19 +35,33 @@ This Python script:
 ## Requirements
 
 basemap==1.3.7
+
 basemap_data==1.3.2
+
 basemap_data_hires==1.3.2
+
 dask==2023.6.0
+
 matplotlib==3.7.1
+
 numpy==1.25.1
+
 pandas==1.5.3
+
 pipreqs==0.4.13
+
 pipreqsnb==0.2.4
+
 Requests==2.31.0
+
 scikit_learn==1.2.2
+
 scipy==1.11.1
+
 SQLAlchemy==2.0.16
+
 unlzw3==0.2.2
+
 
 ## Acknowledgements
 
