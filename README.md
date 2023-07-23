@@ -34,23 +34,33 @@ This Python script:
 
 ## Requirements
 
-basemap==1.3.7
+basemap==1.3.7 
 
 basemap_data==1.3.2
 
 basemap_data_hires==1.3.2
 
+dash==2.11.1
+
+dash_core_components==2.0.0
+
 dask==2023.6.0
+
+Flask==2.2.5
 
 matplotlib==3.7.1
 
 numpy==1.25.1
 
+opendatasets==0.1.22
+
 pandas==1.5.3
 
 pipreqs==0.4.13
 
-pipreqsnb==0.2.4
+plotly==5.15.0
+
+promptlib==1.0.0
 
 Requests==2.31.0
 
@@ -61,6 +71,7 @@ scipy==1.11.1
 SQLAlchemy==2.0.16
 
 unlzw3==0.2.2
+
 
 
 ## Acknowledgements
